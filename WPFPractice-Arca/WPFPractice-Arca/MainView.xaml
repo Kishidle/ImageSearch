@@ -1,0 +1,91 @@
+﻿<Window x:Class="WPFPractice_Arca.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFPractice_Arca"
+        mc:Ignorable="d"
+        Title="MainView" Height="450" Width="650">
+    <Grid Margin="0,0,0,-21">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="650*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <DockPanel VerticalAlignment="Top">
+            <Menu HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="641" Grid.ColumnSpan="2">
+                <MenuItem Header="Administration">
+                    <MenuItem Header="_Plaza Supervisor &amp; Teller Account Management"/>
+                    <MenuItem Header="Toll Matrix Management"/>
+                    <MenuItem Header="Draft Toll Matrix Management"/>
+                    <MenuItem Header="General Parameters Management"/>
+                    <MenuItem Header="User Management">
+                        <MenuItem Header="Access Rights Template"/>
+                        <MenuItem Header="Audit Trail"/>
+                        <MenuItem Header="Change Password"/>
+                        <MenuItem Header="User Maintenance"/>
+                    </MenuItem>
+                    <MenuItem Header="Version Management"/>
+                    <Separator/>
+                    <MenuItem Header="Log Off"/>
+                    <MenuItem Header="Exit"/>
+                </MenuItem>
+                <MenuItem Header="Audit">
+                    <MenuItem Header="Dispute Transactions"/>
+                    <MenuItem Header="Irregular E-Pass Transactions"/>
+                    <MenuItem Header="Ambulant Transactions"/>
+                    <MenuItem Header="Manual Toll">
+                        <MenuItem Header="Revenue"/>
+                        <MenuItem Header="Non-Revenue"/>
+                    </MenuItem>
+                    <MenuItem Header="Cash Turnover"/>
+                    <MenuItem Header="Cash Turnover (new)"/>
+                </MenuItem>
+                <MenuItem Header="Reporting Module">
+                    <MenuItem Header="Traffic and Revenue Module"/>
+                    <MenuItem Header="Traffic Count Module"/>
+                    <MenuItem Header="Traffic Summary"/>
+                    <MenuItem Header="Teller Accountability Module"/>
+                    <MenuItem Header="Bag Count Reporting"/>
+                    <MenuItem Header="Cash Turnover Reports"/>
+                    <MenuItem Header="CSC Adjustments"/>
+                    <MenuItem Header="Classification Discrepancy Module"/>
+                    <MenuItem Header="Entry Card Tracking Module"/>
+                    <MenuItem Header="Lenders">
+                        <MenuItem Header="Revenue"/>
+                        <MenuItem Header="Non-Revenue"/>
+                    </MenuItem>
+                    <MenuItem Header="Unposted ETC Correlated"/>
+
+                </MenuItem>
+                <MenuItem Header="Correlation">
+                    <MenuItem Header="Lane Summaries"/>
+                    <MenuItem Header="Correlation Status"/>
+                    <MenuItem Header="Correlation Lane Status"/>
+                    <MenuItem Header="Orphan and Duplicate ETC Transactions"/>
+                    <MenuItem Header="Cross read and Duplicate Statistics"/>
+                </MenuItem>
+                <MenuItem Header="Card Management">
+                    <MenuItem Header="Card Encoding"/>
+                </MenuItem>
+                <MenuItem Header="Help">
+
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <DockPanel HorizontalAlignment="Left" Height="30" LastChildFill="False" Margin="0,0,0,19" VerticalAlignment="Bottom" Width="642" Background="#FF7183DC" Grid.Row="1">
+
+            <Label x:Name="dateLabel" Content="Date &amp; Time : " Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="timeLabel" Content=" " Height="26" VerticalAlignment="Top"/>
+            <Label x:Name="userLabel" Content="User Logged on: " Height="26" VerticalAlignment="Top"/>
+
+        </DockPanel>
+        <ContentControl x:Name="contentCtrl" Content="" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Height="366" Grid.RowSpan="2" Width="632"/>
+
+    </Grid>
+
+</Window>
